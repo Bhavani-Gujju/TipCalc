@@ -1,24 +1,24 @@
-let billamount = document.getElementById("billAmount");
-let percentagetip = document.getElementById("percentageTip");
-let tipamount = document.getElementById("tipAmount");
-let totalamount = document.getElementById("totalAmount");
-let errormessage = document.getElementById("errorMessage");
-let errorMessage = "Please Enter a Valid Input.";
+let billAmount = document.getElementById("billAmount");
+let percentageTip = document.getElementById("percentageTip");
+let tipAmount = document.getElementById("tipAmount");
+let totalAmount = document.getElementById("totalAmount");
+let errorMessage = document.getElementById("errorMessage");
+let errorMessageContent = "Please Enter a Valid Input.";
 
-function calculatebutton() {
-    let billamountvalue = billamount.value;
-    let percentagetipvalue = percentagetip.value;
-    if (billamountvalue === "") {
-        errormessage.textContent = errorMessage;
-    } else if (percentagetipvalue === "") {
-        errormessage.textContent = errormessage;
+function calculateTipTotalAmountbutton() {
+    let billAmountValue = billAmount.value;
+    let percentageTipValue = percentageTip.value;
+    if (billamountValue === "") {
+        errorMessage.textContent = errorMessageContent;
+    } else if (percentageTipValue === "") {
+        errorMessage.textContent = errormessageContent;
     } else {
-        errormessage.textContent = "";
-        let billamount = parseInt(billamountvalue);
-        let percentagetip = parseInt(percentagetipvalue);
-        let tip = (percentagetip / 100) * billamount;
-        let total = billamount + tip;
-        tipamount.value = tip;
-        totalamount.value = total;
+        errorMessage.textContent = "";
+        let billAmount = parseInt(billAmountValue);
+        let percentageTip = parseInt(percentagetipvalue);
+        let tip = (percentageTip / 100) * billAmount;
+        let total = billAmount + tip;
+        tipAmount.value = tip;
+        totalAmount.value = total;
     }
 }
